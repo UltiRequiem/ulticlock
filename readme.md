@@ -1,12 +1,11 @@
 # UltiClock
 
-> An example real time clock
-
-## Deploy
-
-Deployed using [GitHub Pages](https://pages.github.com).
-
 > https://ultirequiem.github.io/ulticlock
+
+An example real time clock.
+
+I did this to learn about
+[media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
 
 ## Characteristics
 
@@ -20,4 +19,4 @@ Deployed using [GitHub Pages](https://pages.github.com).
 
 ## Licence
 
-Released under the MIT Licence.
+Released under the MIT licence.
