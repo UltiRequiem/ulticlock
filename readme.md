@@ -17,6 +17,8 @@ I did this to learn about
 
 - Responsive Design
 
+- [Continuos Integration and Deployment](https://github.com/UltiRequiem/ulticlock/actions)
+
 ## Licence
 
 Released under the MIT licence.
