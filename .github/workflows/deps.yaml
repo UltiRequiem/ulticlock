@@ -13,6 +13,7 @@ jobs:
       - uses: denoland/setup-deno@v1
       - name: Update dependencies
         run: >
+          rm deno.json
           deno run -A https://deno.land/x/udd/main.ts
           $(find . -name "*.ts")
       - name: Create Pull Request
