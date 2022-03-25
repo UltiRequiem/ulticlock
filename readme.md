@@ -1,6 +1,6 @@
 # UltiClock
 
-> https://ultirequiem.github.io/ulticlock
+> https://clock.ultirequiem.com
 
 An example real time clock.
 
@@ -19,6 +19,18 @@ I did this to learn about
 
 - [Continuos Integration and Deployment](https://github.com/UltiRequiem/ulticlock/actions)
 
+## Support
+
+Open an Issue, I will check it a soon as possible 👀
+
+If you want to hurry me up a bit
+[send me a tweet](https://twitter.com/intent/tweet?text=%40UltiRequiem%20) 😆
+
+Consider [supporting me on Patreon](https://patreon.com/UltiRequiem) if you like
+my work 🚀
+
+Don't forget to start the repo ⭐
+
 ## Licence
 
-Released under the MIT licence.
+Licensed under the MIT License.

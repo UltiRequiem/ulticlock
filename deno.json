@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "lib": [
-      "dom",
-      "esnext",
-      "dom.iterable"
-    ],
+    "lib": ["dom", "esnext", "dom.iterable"],
+    "jsx": "react",
     "strict": true
+  },
+  "tasks": {
+    "dev": "packup index.html",
+    "build": "packup build index.html"
   }
 }
