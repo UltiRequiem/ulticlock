@@ -1,7 +1,0 @@
-{
-  "deno.enable": true,
-  "deno.lint": true,
-  "deno.config": "./deno.json",
-  "tsserver.enable": false,
-  "prettier.disableLanguages": ["typescriptreact", "markdown", "json"]
-}
