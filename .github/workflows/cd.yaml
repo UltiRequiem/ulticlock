@@ -14,7 +14,7 @@ jobs:
       - run: |
           deno run -A https://deno.land/x/packup@v0.1.12/install.ts
           deno task build
-          echo clock.ultirequiem.com >> CNAME
+          echo clock.ultirequiem.com >> dist/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
