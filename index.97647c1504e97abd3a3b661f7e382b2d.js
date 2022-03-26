@@ -5,7 +5,7 @@
     throw new Error('Dynamic require of "' + x + '" is not supported');
   };
 
-  // deno:https://cdn.esm.sh/v73/react@17.0.2/deno/react.js
+  // deno:https://cdn.esm.sh/v74/react@17.0.2/deno/react.js
   var __object_assign$ = Object.assign;
   var G = Object.create;
   var h = Object.defineProperty;
@@ -278,7 +278,7 @@
   var { default: ie, ...fe } = Y;
   var Ue = W.default ?? ie ?? fe;
 
-  // deno:https://cdn.esm.sh/v73/scheduler@0.20.2/deno/scheduler.js
+  // deno:https://cdn.esm.sh/v74/scheduler@0.20.2/deno/scheduler.js
   var B = Object.create;
   var C = Object.defineProperty;
   var G2 = Object.getOwnPropertyDescriptor;
@@ -533,7 +533,7 @@
   var { default: ue, ...ae2 } = z2;
   var Ne2 = D.default ?? ue ?? ae2;
 
-  // deno:https://cdn.esm.sh/v73/react-dom@17.0.2/deno/react-dom.js
+  // deno:https://cdn.esm.sh/v74/react-dom@17.0.2/deno/react-dom.js
   var __object_assign$2 = Object.assign;
   var Ps = Object.create;
   var Or = Object.defineProperty;
