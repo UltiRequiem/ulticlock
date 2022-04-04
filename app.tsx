@@ -1,8 +1,6 @@
 import React from "https://esm.sh/react@17.0.2";
 import ReactDOM from "https://esm.sh/react-dom@17.0.2";
 
-import { h, Component, render, useState } from "https://esm.sh/preact";
-
 import { tw } from "https://esm.sh/twind";
 
 const App = () => {
