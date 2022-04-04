@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "esnext", "dom.iterable"]
+    "lib": ["dom", "esnext"]
   },
   "tasks": {
     "dev": "packup index.html",
