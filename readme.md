@@ -23,7 +23,7 @@ A real time clock 🕐
 
 ### GH Pages 🐱
 
-- https://clock.ultirequiem.com
+https://clock.ultirequiem.com
 
 ## Support
 
