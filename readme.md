@@ -4,15 +4,20 @@ A real time clock 🕐
 
 ### Features
 
-- 📦 [Packup](https://github.com/kt3k/packup): A zero-config web application packager in Deno
+- 📦 [Packup](https://github.com/kt3k/packup): A zero-config web application
+  packager in Deno
 
-- 💨 [Preact](https://preactjs.com): Fast 3kB alternative to React with the same modern API
+- 💨 [Preact](https://preactjs.com): Fast 3kB alternative to React with the same
+  modern API
 
-- ✨ [Twind](https://twind.dev): The smallest, fastest, most feature complete tailwind-in-js solution in existence
+- ✨ [Twind](https://twind.dev): The smallest, fastest, most feature complete
+  tailwind-in-js solution in existence
 
 - 💪 [TypeScript](https://typescriptlang.org): JavaScript with Types
 
-- 🤖 [Continuos Integration and Deployment](https://github.com/UltiRequiem/ulticlock/actions): For fast and safe development
+- 🤖
+  [Continuos Integration and Deployment](https://github.com/UltiRequiem/ulticlock/actions):
+  For fast and safe development
 
 ## Deploy
 
