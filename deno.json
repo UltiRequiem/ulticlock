@@ -1,11 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "esnext",
-      "dom.iterable"
-    ],
-    "jsx": "react"
+    "lib": ["dom", "esnext", "dom.iterable"]
   },
   "tasks": {
     "dev": "packup index.html",

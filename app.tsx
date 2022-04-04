@@ -1,6 +1,7 @@
-import React, { useState } from "https://esm.sh/react@17.0.2";
-import ReactDOM from "https://esm.sh/react-dom@17.0.2";
+/** @jsx h */
 
+import { h, render } from "https://esm.sh/preact";
+import { useState } from "https://esm.sh/preact/hooks";
 import { tw } from "https://esm.sh/twind";
 
 const App = () => {
@@ -12,24 +13,31 @@ const App = () => {
 
   return (
     <main
-      className={tw`h-screen bg-purple-400 flex items-center justify-center flex-col`}
+      class={tw`h-screen bg-purple-400 flex items-center justify-center flex-col`}
     >
-      <p className={tw`font-bold text(center 5xl gray-800)`}>
-        The current time is {date.toLocaleTimeString()}.
+      <p class={tw`font-bold text(center 7xl gray-800)`}>
+        {date.toLocaleTimeString()}
       </p>
 
-      <footer className={tw`text-center text-gray-500 mt-10`}>
+      <footer class={tw`text(center gray-500) mt-10`}>
         <address>
           <a
-            className={tw`text(gray-500 2xl) hover:text-blue-700`}
+            class={tw`text-2xl hover:text-blue-700`}
             href="https://ultirequiem.com"
           >
             Eliaz Bobadilla
           </a>
         </address>
+
+        <a
+          class={tw`hover:text-green-500 text-xl`}
+          href="https://github.com/UltiRequiem/ulticlock"
+        >
+          Source Code
+        </a>
       </footer>
     </main>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById("root")!);
