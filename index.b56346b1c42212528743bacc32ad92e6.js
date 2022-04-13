@@ -974,17 +974,28 @@
     }, [delay]);
   }
 
+  // deno:file:///home/runner/work/ulticlock/ulticlock/src/utils/dateFormatter.ts
+  var dateFmt = Intl.DateTimeFormat("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
   // deno:file:///home/runner/work/ulticlock/ulticlock/src/app.tsx
   var App = () => {
     const [date, setDate] = F2(new Date());
     useInterval(() => {
       setDate(new Date());
     }, 1e3);
+    const text = Yt`font-bold text(center 7xl gray-800)`;
     return /* @__PURE__ */ Z("main", {
       class: Yt`h-screen bg-purple-400 flex items-center justify-center flex-col`
     }, /* @__PURE__ */ Z("p", {
-      class: Yt`font-bold text(center 7xl gray-800)`
-    }, date.toLocaleTimeString()), /* @__PURE__ */ Z(Footer, null));
+      class: text
+    }, date.toLocaleTimeString()), /* @__PURE__ */ Z("p", {
+      class: text
+    }, dateFmt.format(date)), /* @__PURE__ */ Z(Footer, null));
   };
   oe(/* @__PURE__ */ Z(App, null), document.getElementById("root"));
 })();
