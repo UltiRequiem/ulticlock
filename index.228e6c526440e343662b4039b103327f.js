@@ -951,7 +951,7 @@
     }, /* @__PURE__ */ Z("address", null, /* @__PURE__ */ Z("a", {
       class: Yt`text-2xl hover:text-blue-700`,
       href: "https://ultirequiem.com"
-    }, "Eliaz Bobadilla")), /* @__PURE__ */ Z("a", {
+    }, "\xA9 Eliaz Bobadilla")), /* @__PURE__ */ Z("a", {
       class: Yt`hover:text-green-500 text-xl`,
       href: "https://github.com/UltiRequiem/ulticlock"
     }, "Source Code"));
@@ -988,13 +988,12 @@
     useInterval(() => {
       setDate(new Date());
     }, 1e3);
-    const text = Yt`font-bold text(center 7xl gray-800)`;
     return /* @__PURE__ */ Z("main", {
-      class: Yt`h-screen bg-purple-400 flex items-center justify-center flex-col`
+      class: Yt`h-screen bg-purple-400 flex items-center justify-center flex-col font-bold text-center`
     }, /* @__PURE__ */ Z("p", {
-      class: text
+      class: Yt`md:text-9xl text-5xl`
     }, date.toLocaleTimeString()), /* @__PURE__ */ Z("p", {
-      class: text
+      class: Yt`md:text-6xl text-2xl`
     }, dateFmt.format(date)), /* @__PURE__ */ Z(Footer, null));
   };
   oe(/* @__PURE__ */ Z(App, null), document.getElementById("root"));
