@@ -12,15 +12,13 @@ const App = () => {
     setDate(new Date());
   }, 1000);
 
-  const text = tw`font-bold text(center 7xl gray-800)`;
-
   return (
     <main
       class={tw
-        `h-screen bg-purple-400 flex items-center justify-center flex-col`}
+        `h-screen bg-purple-400 flex items-center justify-center flex-col font-bold text-center`}
     >
-      <p class={text}>{date.toLocaleTimeString()}</p>
-      <p class={text}>{dateFmt.format(date)}</p>
+      <p class={tw`md:text-9xl text-5xl`}>{date.toLocaleTimeString()}</p>
+      <p class={tw`md:text-6xl text-2xl`}>{dateFmt.format(date)}</p>
 
       <Footer />
     </main>

@@ -10,7 +10,7 @@ export function Footer() {
           class={tw`text-2xl hover:text-blue-700`}
           href="https://ultirequiem.com"
         >
-          Eliaz Bobadilla
+          © Eliaz Bobadilla
         </a>
       </address>
 
