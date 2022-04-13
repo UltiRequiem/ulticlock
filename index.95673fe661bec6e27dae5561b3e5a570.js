@@ -944,7 +944,7 @@
   };
   var { tw: Yt, setup: Jt } = Vt();
 
-  // deno:file:///home/runner/work/ulticlock/ulticlock/components/Footer.tsx
+  // deno:file:///home/runner/work/ulticlock/ulticlock/src/components/Footer.tsx
   function Footer() {
     return /* @__PURE__ */ Z("footer", {
       class: Yt`text(center gray-500) mt-10`
@@ -957,7 +957,7 @@
     }, "Source Code"));
   }
 
-  // deno:file:///home/runner/work/ulticlock/ulticlock/app.tsx
+  // deno:file:///home/runner/work/ulticlock/ulticlock/src/hooks/useInterval.ts
   function useInterval(callback, delay) {
     const savedCallback = V2();
     T2(() => {
@@ -973,6 +973,8 @@
       return () => clearInterval(id);
     }, [delay]);
   }
+
+  // deno:file:///home/runner/work/ulticlock/ulticlock/src/app.tsx
   var App = () => {
     const [date, setDate] = F2(new Date());
     useInterval(() => {
