@@ -158,17 +158,17 @@
     this.l[t2.type + true](d.event ? d.event(t2) : t2);
   }
   function M(t2, e3, n2, r, l2, _2, s3, f2, p2) {
-    var a2, o2, h3, c2, i2, u2, b3, v3, y2, m3, w, g = e3.type;
+    var a2, o2, h3, c2, i2, u2, b3, v3, y2, m3, w, g2 = e3.type;
     if (e3.constructor !== void 0)
       return null;
     n2.__h != null && (p2 = n2.__h, f2 = e3.__e = n2.__e, e3.__h = null, _2 = [f2]), (a2 = d.__b) && a2(e3);
     try {
       e:
-        if (typeof g == "function") {
-          if (v3 = e3.props, y2 = (a2 = g.contextType) && r[a2.__c], m3 = a2 ? y2 ? y2.props.value : a2.__ : r, n2.__c ? b3 = (o2 = e3.__c = n2.__c).__ = o2.__E : ("prototype" in g && g.prototype.render ? e3.__c = o2 = new g(v3, m3) : (e3.__c = o2 = new E(v3, m3), o2.constructor = g, o2.render = _e), y2 && y2.sub(o2), o2.props = v3, o2.state || (o2.state = {}), o2.context = m3, o2.__n = r, h3 = o2.__d = true, o2.__h = []), o2.__s == null && (o2.__s = o2.state), g.getDerivedStateFromProps != null && (o2.__s == o2.state && (o2.__s = k({}, o2.__s)), k(o2.__s, g.getDerivedStateFromProps(v3, o2.__s))), c2 = o2.props, i2 = o2.state, h3)
-            g.getDerivedStateFromProps == null && o2.componentWillMount != null && o2.componentWillMount(), o2.componentDidMount != null && o2.__h.push(o2.componentDidMount);
+        if (typeof g2 == "function") {
+          if (v3 = e3.props, y2 = (a2 = g2.contextType) && r[a2.__c], m3 = a2 ? y2 ? y2.props.value : a2.__ : r, n2.__c ? b3 = (o2 = e3.__c = n2.__c).__ = o2.__E : ("prototype" in g2 && g2.prototype.render ? e3.__c = o2 = new g2(v3, m3) : (e3.__c = o2 = new E(v3, m3), o2.constructor = g2, o2.render = _e), y2 && y2.sub(o2), o2.props = v3, o2.state || (o2.state = {}), o2.context = m3, o2.__n = r, h3 = o2.__d = true, o2.__h = []), o2.__s == null && (o2.__s = o2.state), g2.getDerivedStateFromProps != null && (o2.__s == o2.state && (o2.__s = k({}, o2.__s)), k(o2.__s, g2.getDerivedStateFromProps(v3, o2.__s))), c2 = o2.props, i2 = o2.state, h3)
+            g2.getDerivedStateFromProps == null && o2.componentWillMount != null && o2.componentWillMount(), o2.componentDidMount != null && o2.__h.push(o2.componentDidMount);
           else {
-            if (g.getDerivedStateFromProps == null && v3 !== c2 && o2.componentWillReceiveProps != null && o2.componentWillReceiveProps(v3, m3), !o2.__e && o2.shouldComponentUpdate != null && o2.shouldComponentUpdate(v3, o2.__s, m3) === false || e3.__v === n2.__v) {
+            if (g2.getDerivedStateFromProps == null && v3 !== c2 && o2.componentWillReceiveProps != null && o2.componentWillReceiveProps(v3, m3), !o2.__e && o2.shouldComponentUpdate != null && o2.shouldComponentUpdate(v3, o2.__s, m3) === false || e3.__v === n2.__v) {
               o2.props = v3, o2.state = o2.__s, e3.__v !== n2.__v && (o2.__d = false), o2.__v = e3, e3.__e = n2.__e, e3.__k = n2.__k, e3.__k.forEach(function(A3) {
                 A3 && (A3.__ = e3);
               }), o2.__h.length && s3.push(o2);
@@ -308,6 +308,15 @@
     var t2 = a(c++, 3);
     !d.__s && l(t2.__H, n2) && (t2.__ = _2, t2.__H = n2, e.__H.__h.push(t2));
   }
+  function V2(_2) {
+    return i = 5, g(function() {
+      return { current: _2 };
+    }, []);
+  }
+  function g(_2, n2) {
+    var t2 = a(c++, 7);
+    return l(t2.__H, n2) && (t2.__ = _2(), t2.__H = n2, t2.__h = _2), t2.__;
+  }
   function x2() {
     for (var _2; _2 = b.shift(); )
       if (_2.__P)
@@ -426,7 +435,7 @@
   };
   var N2;
   var Z2;
-  var V2 = (e3 = "") => (N2.push(e3), "");
+  var V3 = (e3 = "") => (N2.push(e3), "");
   var Fe = (e3) => {
     N2.length = Math.max(N2.lastIndexOf("") + ~~e3, 0);
   };
@@ -450,13 +459,13 @@
       }
       switch (i2) {
         case ":":
-          r = r && V2(":" + (e3[o2] == i2 ? e3[o2++] : "") + r);
+          r = r && V3(":" + (e3[o2] == i2 ? e3[o2++] : "") + r);
           break;
         case "(":
-          r = r && V2(r), V2();
+          r = r && V3(r), V3();
           break;
         case "!":
-          V2(i2);
+          V3(i2);
           break;
         case ")":
         case " ":
@@ -470,14 +479,14 @@
           r += i2;
       }
     }
-    r && (t2 ? V2(":" + r) : r.slice(-1) == "-" ? V2(r.slice(0, -1)) : Oe(r));
+    r && (t2 ? V3(":" + r) : r.slice(-1) == "-" ? V3(r.slice(0, -1)) : Oe(r));
   };
   var Ge = (e3) => {
-    V2(), ue(e3), Fe();
+    V3(), ue(e3), Fe();
   };
   var lt = (e3, t2) => {
     if (t2) {
-      V2();
+      V3();
       let r = v2("tbu", (typeof t2)[1]);
       ne2(e3, r), r && Ge(t2), Fe();
     }
@@ -835,7 +844,7 @@
               let E3 = c2.length;
               w([], "", 0, k2, O2);
               let z2 = c2.splice(E3, c2.length - E3);
-              c2.push({ r: me(f(z2.map((l2) => l2.r), ""), p2), p: z2.reduce((l2, g) => l2 + g.p, 0) });
+              c2.push({ r: me(f(z2.map((l2) => l2.r), ""), p2), p: z2.reduce((l2, g2) => l2 + g2.p, 0) });
             } else
               p2[1] == "i" ? (Array.isArray(k2) ? k2 : [k2]).forEach((E3) => E3 && c2.push({ p: 0, r: `${p2} ${E3};` })) : (p2[2] == "c" && (p2 = pe(r.theme("screens", u(p2, 8).trim()))), w([...y2, p2], S2, C2 | tt(p2) | it(p2), k2, O2));
           else
@@ -866,17 +875,17 @@
   var Ue = (e3, t2 = e3.d) => typeof t2 == "function" ? "" : e3.v.reduce(Mt, "") + (e3.i ? "!" : "") + (e3.n ? "-" : "") + t2;
   var It = { _: { value: "", writable: true } };
   var Bt = (e3 = {}) => {
-    let t2 = zt(e3.theme), r = Ut(e3.mode), i2 = we(e3.hash, false, false, be), a2 = e3.important, o2 = { v: [] }, s3 = 0, d3 = [], c2 = { tw: (...l2) => E3(l2), theme: (l2, g, x3) => {
+    let t2 = zt(e3.theme), r = Ut(e3.mode), i2 = we(e3.hash, false, false, be), a2 = e3.important, o2 = { v: [] }, s3 = 0, d3 = [], c2 = { tw: (...l2) => E3(l2), theme: (l2, g2, x3) => {
       var R2;
-      let W2 = (R2 = t2(l2, g, x3)) != null ? R2 : r.unknown(l2, g == null || Array.isArray(g) ? g : g.split("."), x3 != null, c2);
+      let W2 = (R2 = t2(l2, g2, x3)) != null ? R2 : r.unknown(l2, g2 == null || Array.isArray(g2) ? g2 : g2.split("."), x3 != null, c2);
       return o2.n && W2 && v2("rg", (typeof W2)[5]) ? `calc(${W2} * -1)` : W2;
     }, tag: (l2) => i2 ? i2(l2) : l2, css: (l2) => {
       s3++;
-      let g = d3.length;
+      let g2 = d3.length;
       try {
         (typeof l2 == "string" ? $e([l2]) : l2).forEach(k2);
         let x3 = Object.create(null, It);
-        for (let R2 = g; R2 < d3.length; R2++) {
+        for (let R2 = g2; R2 < d3.length; R2++) {
           let W2 = d3[R2];
           if (W2)
             switch (typeof W2) {
@@ -889,39 +898,39 @@
         }
         return x3;
       } finally {
-        d3.length = g, s3--;
+        d3.length = g2, s3--;
       }
     } }, w = Pt({ ...bt, ...e3.plugins }, c2), U2 = (l2) => {
-      let g = o2;
+      let g2 = o2;
       o2 = l2;
       try {
         return X2(w(l2), c2);
       } finally {
-        o2 = g;
+        o2 = g2;
       }
     }, y2 = { ...vt, ...e3.variants }, S2 = Dt(e3.darkMode || "media", y2, c2), C2 = Lt(we(e3.prefix, kt, _), y2, c2), $2 = e3.sheet || (typeof window > "u" ? wt() : mt(e3)), { init: O2 = (l2) => l2() } = $2, H3 = Nt($2, r, O2, c2), M2;
     O2((l2 = new Map()) => M2 = l2);
-    let q3 = new WeakMap(), p2 = (l2, g) => l2 == "_" ? void 0 : typeof g == "function" ? JSON.stringify(X2(g, c2), p2) : g, k2 = (l2) => {
+    let q3 = new WeakMap(), p2 = (l2, g2) => l2 == "_" ? void 0 : typeof g2 == "function" ? JSON.stringify(X2(g2, c2), p2) : g2, k2 = (l2) => {
       !s3 && o2.v.length && (l2 = { ...l2, v: [...o2.v, ...l2.v], $: "" }), l2.$ || (l2.$ = Ue(l2, q3.get(l2.d)));
-      let g = s3 ? null : M2.get(l2.$);
-      if (g == null) {
+      let g2 = s3 ? null : M2.get(l2.$);
+      if (g2 == null) {
         let x3 = U2(l2);
         if (l2.$ || (l2.$ = be(JSON.stringify(x3, p2)), q3.set(l2.d, l2.$), l2.$ = Ue(l2, l2.$)), x3 && typeof x3 == "object")
           if (l2.v = l2.v.map(et), a2 && (l2.i = a2), x3 = S2(x3, l2), s3)
             d3.push(x3);
           else {
             let R2 = typeof l2.d == "function" ? typeof x3._ == "string" ? 1 : 3 : 2;
-            g = i2 || typeof l2.d == "function" ? (i2 || be)(R2 + l2.$) : l2.$, C2(x3, g, l2, R2).forEach(H3), x3._ && (g += " " + x3._);
+            g2 = i2 || typeof l2.d == "function" ? (i2 || be)(R2 + l2.$) : l2.$, C2(x3, g2, l2, R2).forEach(H3), x3._ && (g2 += " " + x3._);
           }
         else
-          typeof x3 == "string" ? g = x3 : (g = l2.$, r.report({ id: "UNKNOWN_DIRECTIVE", rule: g }, c2)), s3 && typeof l2.d != "function" && d3.push(g);
-        s3 || (M2.set(l2.$, g), Ie(M2, 3e4));
+          typeof x3 == "string" ? g2 = x3 : (g2 = l2.$, r.report({ id: "UNKNOWN_DIRECTIVE", rule: g2 }, c2)), s3 && typeof l2.d != "function" && d3.push(g2);
+        s3 || (M2.set(l2.$, g2), Ie(M2, 3e4));
       }
-      return g;
+      return g2;
     }, E3 = (l2) => f($e(l2).map(k2).filter(Boolean), " "), z2 = we(e3.preflight, nt, false);
     if (z2) {
-      let l2 = ht(t2), g = C2(typeof z2 == "function" ? X2(z2(l2, c2), c2) || l2 : { ...l2, ...z2 });
-      O2((x3 = (g.forEach(H3), true)) => x3);
+      let l2 = ht(t2), g2 = C2(typeof z2 == "function" ? X2(z2(l2, c2), c2) || l2 : { ...l2, ...z2 });
+      O2((x3 = (g2.forEach(H3), true)) => x3);
     }
     return { init: () => r.report({ id: "LATE_SETUP_CALL" }, c2), process: E3 };
   };
@@ -949,14 +958,26 @@
   }
 
   // deno:file:///home/runner/work/ulticlock/ulticlock/app.tsx
+  function useInterval(callback, delay) {
+    const savedCallback = V2();
+    T2(() => {
+      savedCallback.current = callback;
+    });
+    T2(() => {
+      function tick() {
+        if (savedCallback.current) {
+          savedCallback.current();
+        }
+      }
+      const id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }, [delay]);
+  }
   var App = () => {
     const [date, setDate] = F2(new Date());
-    T2(() => {
-      const interval = setInterval(() => {
-        setDate(new Date());
-      }, 1e3);
-      return () => clearInterval(interval);
-    }, [date]);
+    useInterval(() => {
+      setDate(new Date());
+    }, 1e3);
     return /* @__PURE__ */ Z("main", {
       class: Yt`h-screen bg-purple-400 flex items-center justify-center flex-col`
     }, /* @__PURE__ */ Z("p", {
