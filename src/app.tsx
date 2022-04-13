@@ -1,8 +1,6 @@
 /** @jsx h */
 
-import { h, render } from "https://esm.sh/preact";
-import { useState } from "https://esm.sh/preact/hooks";
-import { tw } from "https://esm.sh/twind";
+import { h, render, tw, useState } from "./deps.ts";
 import { Footer } from "./components/mod.ts";
 import { useInterval } from "./hooks/mod.ts";
 

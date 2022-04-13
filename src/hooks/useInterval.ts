@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "https://esm.sh/preact/hooks";
+import { useEffect, useRef } from "../deps.ts";
 
 export function useInterval(callback: () => void, delay: number) {
   const savedCallback = useRef<typeof callback>();

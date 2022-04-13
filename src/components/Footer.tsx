@@ -1,7 +1,6 @@
 /** @jsx h */
 
-import { tw } from "https://esm.sh/twind";
-import { h } from "https://esm.sh/preact";
+import { h, tw } from "../deps.ts";
 
 export function Footer() {
   return (
