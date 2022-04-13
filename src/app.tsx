@@ -1,28 +1,10 @@
 /** @jsx h */
 
 import { h, render } from "https://esm.sh/preact";
-import { useEffect, useRef, useState } from "https://esm.sh/preact/hooks";
+import { useState } from "https://esm.sh/preact/hooks";
 import { tw } from "https://esm.sh/twind";
-import { Footer } from "./components/Footer.tsx";
-
-function useInterval(callback: () => void, delay: number) {
-  const savedCallback = useRef<typeof callback>();
-
-  useEffect(() => {
-    savedCallback.current = callback;
-  });
-
-  useEffect(() => {
-    function tick() {
-      if (savedCallback.current) {
-        savedCallback.current();
-      }
-    }
-
-    const id = setInterval(tick, delay);
-    return () => clearInterval(id);
-  }, [delay]);
-}
+import { Footer } from "./components/mod.ts";
+import { useInterval } from "./hooks/mod.ts";
 
 const App = () => {
   const [date, setDate] = useState(new Date());

@@ -3,7 +3,7 @@
     "lib": ["dom", "esnext"]
   },
   "tasks": {
-    "dev": "packup index.html",
-    "build": "packup build index.html"
+    "dev": "packup src/index.html",
+    "build": "packup build src/index.html"
   }
 }
