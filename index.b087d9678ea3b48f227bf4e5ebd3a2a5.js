@@ -983,7 +983,7 @@
   });
 
   // deno:file:///home/runner/work/ulticlock/ulticlock/src/app.tsx
-  var App = () => {
+  function App() {
     const [date, setDate] = F2(new Date());
     useInterval(() => setDate(new Date()), 1e3);
     return /* @__PURE__ */ Z("main", {
@@ -993,6 +993,6 @@
     }, date.toLocaleTimeString()), /* @__PURE__ */ Z("p", {
       class: Yt`md:text-6xl text-2xl`
     }, dateFmt.format(date)), /* @__PURE__ */ Z(Footer, null));
-  };
+  }
   oe(/* @__PURE__ */ Z(App, null), document.getElementById("root"));
 })();
