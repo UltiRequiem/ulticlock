@@ -8,9 +8,7 @@ import { dateFmt } from "./utils/mod.ts";
 const App = () => {
   const [date, setDate] = useState(new Date());
 
-  useInterval(() => {
-    setDate(new Date());
-  }, 1000);
+  useInterval(() => setDate(new Date()), 1000);
 
   return (
     <main
