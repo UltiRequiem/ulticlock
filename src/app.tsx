@@ -5,7 +5,7 @@ import { Footer } from "./components/mod.ts";
 import { useInterval } from "./hooks/mod.ts";
 import { dateFmt } from "./utils/mod.ts";
 
-const App = () => {
+function App() {
   const [date, setDate] = useState(new Date());
 
   useInterval(() => setDate(new Date()), 1000);
@@ -21,6 +21,6 @@ const App = () => {
       <Footer />
     </main>
   );
-};
+}
 
 render(<App />, document.getElementById("root")!);
