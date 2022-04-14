@@ -985,9 +985,7 @@
   // deno:file:///home/runner/work/ulticlock/ulticlock/src/app.tsx
   var App = () => {
     const [date, setDate] = F2(new Date());
-    useInterval(() => {
-      setDate(new Date());
-    }, 1e3);
+    useInterval(() => setDate(new Date()), 1e3);
     return /* @__PURE__ */ Z("main", {
       class: Yt`h-screen bg-purple-400 flex items-center justify-center flex-col font-bold text-center`
     }, /* @__PURE__ */ Z("p", {
