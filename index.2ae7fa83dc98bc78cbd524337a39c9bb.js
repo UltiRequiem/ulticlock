@@ -946,14 +946,18 @@
 
   // deno:file:///home/runner/work/ulticlock/ulticlock/src/components/Footer.tsx
   function Footer() {
+    const [personalSite, sourceCode] = [
+      "https://ultirequiem.com",
+      "https://github.com/UltiRequiem/ulticlock"
+    ];
     return /* @__PURE__ */ Z("footer", {
       class: Yt`text(center gray-500) mt-10`
     }, /* @__PURE__ */ Z("address", null, /* @__PURE__ */ Z("a", {
       class: Yt`text-2xl hover:text-blue-700`,
-      href: "https://ultirequiem.com"
+      href: personalSite
     }, "\xA9 Eliaz Bobadilla")), /* @__PURE__ */ Z("a", {
       class: Yt`hover:text-green-500 text-xl`,
-      href: "https://github.com/UltiRequiem/ulticlock"
+      href: sourceCode
     }, "Source Code"));
   }
 
@@ -975,24 +979,33 @@
   }
 
   // deno:file:///home/runner/work/ulticlock/ulticlock/src/utils/dateFormatter.ts
-  var dateFmt = Intl.DateTimeFormat("en-US", {
+  var { format: humanDateFmt } = Intl.DateTimeFormat(navigator.language, {
     weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric"
   });
+  var { format: hourFmt } = Intl.DateTimeFormat(navigator.language, {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true
+  });
 
   // deno:file:///home/runner/work/ulticlock/ulticlock/src/app.tsx
   function App() {
     const [date, setDate] = F2(new Date());
-    useInterval(() => setDate(new Date()), 1e3);
+    useInterval(() => {
+      const newDate = new Date();
+      document.title = `${hourFmt(newDate)} - UltiClock`;
+      setDate(newDate);
+    }, 1e3);
     return /* @__PURE__ */ Z("main", {
       class: Yt`h-screen bg-purple-400 flex items-center justify-center flex-col font-bold text-center`
     }, /* @__PURE__ */ Z("p", {
       class: Yt`md:text-9xl text-5xl`
     }, date.toLocaleTimeString()), /* @__PURE__ */ Z("p", {
       class: Yt`md:text-6xl text-2xl`
-    }, dateFmt.format(date)), /* @__PURE__ */ Z(Footer, null));
+    }, humanDateFmt(date)), /* @__PURE__ */ Z(Footer, null));
   }
   oe(/* @__PURE__ */ Z(App, null), document.getElementById("root"));
 })();
