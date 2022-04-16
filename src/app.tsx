@@ -21,8 +21,6 @@ function App() {
     }
   }, 1000);
 
-  console.log(pushConfetti);
-
   return (
     <main
       class={tw
@@ -31,14 +29,21 @@ function App() {
       <p class={tw`md:text-9xl text-5xl`}>{date.toLocaleTimeString()}</p>
       <p class={tw`md:text-6xl text-2xl`}>{humanDateFmt(date)}</p>
 
-      <label class={tw`m-3`}>
+      <div class={tw`flex items-center m-4`}>
         <input
           type="checkbox"
+          class={tw
+            `w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600`}
           checked={pushConfetti}
-          onInput={setPushConfetti}
+          onInput={() => setPushConfetti(!pushConfetti)}
         />
-        Confetti
-      </label>
+        <label
+          for="checkbox-1"
+          class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >
+          Confetti
+        </label>
+      </div>
 
       <Footer />
     </main>
