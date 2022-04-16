@@ -1484,20 +1484,23 @@
         canvas_confetti_default();
       }
     }, 1e3);
-    console.log(pushConfetti);
     return /* @__PURE__ */ Z("main", {
       class: Yt`h-screen bg-purple-400 flex items-center justify-center flex-col font-bold text-center`
     }, /* @__PURE__ */ Z("p", {
       class: Yt`md:text-9xl text-5xl`
     }, date.toLocaleTimeString()), /* @__PURE__ */ Z("p", {
       class: Yt`md:text-6xl text-2xl`
-    }, humanDateFmt(date)), /* @__PURE__ */ Z("label", {
-      class: Yt`m-3`
+    }, humanDateFmt(date)), /* @__PURE__ */ Z("div", {
+      class: Yt`flex items-center m-4`
     }, /* @__PURE__ */ Z("input", {
       type: "checkbox",
+      class: Yt`w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600`,
       checked: pushConfetti,
-      onInput: setPushConfetti
-    }), "Confetti"), /* @__PURE__ */ Z(Footer, null));
+      onInput: () => setPushConfetti(!pushConfetti)
+    }), /* @__PURE__ */ Z("label", {
+      for: "checkbox-1",
+      class: "ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+    }, "Confetti")), /* @__PURE__ */ Z(Footer, null));
   }
   oe(/* @__PURE__ */ Z(App, null), document.getElementById("root"));
 })();
